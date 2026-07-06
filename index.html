@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Portal</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #070b16;
+      color: white;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(17, 26, 46, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: radial-gradient(circle at top, #1b2a55, #070b16);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin: 0;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      color: #60a5fa;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    /* CARD */
+    .card {
+      background: linear-gradient(145deg, #121a33, #0e1428);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 14px;
+      transition: 0.25s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border: 1px solid rgba(56,189,248,0.4);
+      box-shadow: 0 15px 40px rgba(56,189,248,0.15);
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #38bdf8;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #2563eb, #a78bfa);
+    }
+
+    /* INFO BOX */
+    .info {
+      background: rgba(56,189,248,0.08);
+      border: 1px solid rgba(56,189,248,0.2);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">🎮 Game Portal</div>
+    <div>
+      <a href="#games">Juegos</a>
+      <a href="#news">Noticias</a>
+      <a href="#about">Info</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>El Portal Gamer Definitivo</h1>
+    <p>Juegos • Noticias • Comunidad • Todo en un solo lugar</p>
+  </div>
+
+  <div class="container">
+
+    <!-- INFO -->
+    <div id="about" class="info">
+      <b>📌 Bienvenido:</b> este es un portal moderno de videojuegos con información clara,
+      diseño profesional y estructura tipo sitio real.
+    </div>
+
+    <!-- GAMES -->
+    <div id="games">
+      <div class="section-title">🔥 Juegos populares</div>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="title">Minecraft</div>
+          <p>Mundo abierto infinito de construcción y supervivencia.</p>
+          <span class="tag">Sandbox</span>
+        </div>
+
+        <div class="card">
+          <div class="title">Valorant</div>
+          <p>FPS táctico competitivo basado en habilidades.</p>
+          <span class="tag">Shooter</span>
+        </div>
+
+        <div class="card">
+          <div class="title">Fortnite</div>
+          <p>Battle royale con eventos globales en vivo.</p>
+          <span class="tag">BR</span>
+        </div>
+
+        <div class="card">
+          <div class="title">GTA V</div>
+          <p>Mundo abierto con historia y modo online.</p>
+          <span class="tag">Open World</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- NEWS -->
+    <div id="news">
+      <div class="section-title">📰 Noticias recientes</div>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="title">🚀 Nueva actualización</div>
+          <p>Mejoras de rendimiento y nuevas funciones añadidas.</p>
+        </div>
+
+        <div class="card">
+          <div class="title">🎯 Evento activo</div>
+          <p>Recompensas especiales disponibles esta semana.</p>
+        </div>
+
+        <div class="card">
+          <div class="title">🧠 Nuevo lanzamiento</div>
+          <p>Juegos indie prometedores están por llegar.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Game Portal — Nivel Dios Final
+  </footer>
+
+</body>
+</html>
